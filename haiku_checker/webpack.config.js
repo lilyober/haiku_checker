@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
@@ -9,16 +9,16 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    devServer: { 
-        static: { 
-          directory: path.join(__dirname, "dist"), 
-        }, 
-      },  
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist"),
+        },
+    },
     plugins: [
         new ESLintPlugin(),
-        new CleanWebpackPlugin(), 
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Shape Tracker',
+            title: 'Haiku Checker',
             template: './src/index.html',
             inject: 'body'
         })
